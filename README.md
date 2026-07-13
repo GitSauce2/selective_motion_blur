@@ -1,6 +1,6 @@
 # Selective Motion Blur
 **(Versions Supported)**
-5.0x, 5.1x
+5.0x, 5.1x, 5.2 LTS
 
 An addon that is able to render individual object motion blurring for EEVEE. Works for many objects, including lights and cameras!
 
