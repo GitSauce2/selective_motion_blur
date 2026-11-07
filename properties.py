@@ -26,14 +26,14 @@ class smb_parent_props(PropertyGroup):
     
     target_parent : PointerProperty(name="Target Parent",
                                     type=Object,
-                                    description='Select another object that the current object will temporarily parent to when rendering. Only works if "Motion Blur" & "True MBI" are disabled. Does not consider the parent\'s motion blur toggle (treated as if it was enabled). Will be skipped if it\'s the current object or unassigned',
+                                    description='Select another object that the current object will inherit its motion blur from, as if the target was a parent. Only works if "Motion Blur" & "True MBI" are disabled. Does not consider the parent\'s motion blur toggle (treated as if enabled). Will be skipped if it\'s the current object or unassigned',
                                    )
                                 
     target_bone : StringProperty(name="Target Bone",
-                                 description="Select a bone for this armature. Will use the object if none are assigned, this bone doesn't exist, or this bone has a 0.0 scale value",
+                                 description="Select a bone to inherit from for this armature. Will use the object if none are assigned, this bone doesn't exist, or this bone has a 0.0 scale value",
                                 )
                                 
     parent_enable : BoolProperty(name="Enable Parent",
                                  default=True,
-                                 description='Use this parent for the render. Only the highest enabled and valid parent in the list takes effect',
+                                 description='Use this parent blur slot for the render. Only the highest enabled and valid parent blur slot in the list takes effect',
                                 )

@@ -17,7 +17,7 @@
 bl_info = {
     "name" : "Selective Motion Blur",
     "author" : "SauceBees",
-    "version" : (0, 6, 1),
+    "version" : (0, 6, 2),
     "blender" : (5, 0, 0),
     "location" : "Object/Render Properties > Selective Motion Blur Options",
     "description" : "Individual object motion blurring for EEVEE.",
