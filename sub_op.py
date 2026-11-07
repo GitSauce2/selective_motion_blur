@@ -5,7 +5,7 @@ from bpy.props import EnumProperty
 class smb_OT_parent_additem(Operator):
     bl_idname = "selective_motion_blur.ui_add_parent"
     bl_label = ""
-    bl_description = 'Add an optional parent slot for this object. This object will parent itself to the given object (if enabled) during the render. Only works if "Motion Blur" & "True MBI" are disabled'
+    bl_description = 'Add an optional parent blur slot for this object. If enabled, this object will inherit the given target\'s motion blur like a parent. Only works if "Motion Blur" & "True MBI" are disabled. Does not consider the parent\'s motion blur toggle (treated as if enabled)'
     bl_options = {"REGISTER", "UNDO", "INTERNAL"}
     
     def execute(self, context):
@@ -15,7 +15,7 @@ class smb_OT_parent_additem(Operator):
 class smb_OT_parent_deleteitem(Operator):
     bl_idname = "selective_motion_blur.ui_delete_parent"
     bl_label = ""
-    bl_description = "Delete a parent slot"
+    bl_description = "Delete a parent blur slot"
     bl_options = {"REGISTER", "UNDO", "INTERNAL"}
     
     def execute(self, context):
@@ -30,7 +30,7 @@ class smb_OT_parent_deleteitem(Operator):
 class smb_OT_parent_moveitem(Operator):
     bl_idname = "selective_motion_blur.ui_move_parent"
     bl_label = ""
-    bl_description = "Move a parent slot"
+    bl_description = "Move a parent blur slot"
     bl_options = {"REGISTER", "UNDO", "INTERNAL"}
                                     
     direction_enum : EnumProperty(items=[

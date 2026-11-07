@@ -1,6 +1,6 @@
 # Selective Motion Blur
 **(Versions Supported)**
-5.0x, 5.1x, 5.2 LTS
+5.0x, 5.1x, 5.2 LTS, 5.3
 
 An addon that is able to render individual object motion blurring for EEVEE. Works for many objects, including lights and cameras!
 
@@ -56,7 +56,7 @@ Render buttons are also available in Render Properties.
 
 - **Motion Blur** - Enable or disable motion blur for this specific object. Blurs caused by camera movement still apply
 - **True MBI** - True Motion Blur Immunity. Object will never motion blur, even when the camera is moving (Only available when Motion Blur is off)
-- **Parent Slots** - Set temporary parents for objects during the render. Prevents self motion-blurring while inheriting motion blur from other objects/bones. This does not consider the parent\'s motion blur toggle (Only available when the above object properties are off)
+- **Parent Blur Slots** - Prevent self motion-blurring while inheriting motion blur from other objects/bones as if they were a parent. This does not consider the parent's motion blur toggle (Only available when the above object properties are off)
 
 ## Known Issues
 1. Console spam when rendering a curve with a greasepencil lineart modifier in the same scene. This also occurs when using the normal render and the curve is set to not render.
